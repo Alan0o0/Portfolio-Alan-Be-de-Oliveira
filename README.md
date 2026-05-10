@@ -28,7 +28,7 @@ Este é o meu **portfólio pessoal e profissional**, desenvolvido para apresenta
 ---
 
 ## 📸 Demonstração
-👉 [Acesse o portfólio online](https://alan0o0.github.io/Portfolio-Alan-B-de-Oliveira/) *(se estiver publicado no GitHub Pages)*
+👉 [Acesse o portfólio online](https://alan0o0.github.io/Portfolio-Alan-Be-de-Oliveira/) *(se estiver publicado no GitHub Pages)*
 
 ---
 
