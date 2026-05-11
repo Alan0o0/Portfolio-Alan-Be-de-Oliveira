@@ -1,0 +1,852 @@
+/* reset */
+* { 
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #0b0f14;       /* fundo geral  */
+  --bg-sec: #12181f;      /* fundo secundário */
+  --card: #1b222c;      /*  cor cards */
+  --borda: #2a313c;     /* bordas */
+
+  --header: #11161c;  /* header */
+  --grad1: #78a5ff;      /* cor 1 da gradiente */
+  --grad2: #2e71f8;      /* cor 2 da gradiente */
+  --grad3: #1e57ca;      /* cor 3 da gradiente */
+  
+  --texto: #f8f9fa;       /* texto principal  */
+  --texto-sec: #adb5bd;   /* texto secundário */
+
+  --hover: #2c74b3;       /* aqui para os links destaque azul */
+}
+
+/* corpo de tudo */
+body {
+  padding-top: 70px;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: var(--bg);
+  color: var(--texto);
+}
+
+/* logo */
+.logo{
+  font-size: 40px;
+  font-weight: bold;
+}
+
+/* header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--header);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: var(--texto);
+  padding: 15px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+h1, h2 {
+  margin-bottom: 20px;
+  color: var(--texto-claro);
+}
+
+span{
+  background: linear-gradient(
+    to right,
+    var(--grad1),
+    var(--grad2),
+    var(--grad3)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px rgb(0, 0, 0.5);
+}
+
+p span{
+  background: linear-gradient(
+    to right,
+    var(--grad1),
+    var(--grad2),
+    var(--grad3)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 0px;
+}
+
+/* menu -----------------------*/
+nav {
+  position: absolute;
+  left:50%;
+  transform: translateX(-50%);
+}
+
+nav ul{
+  font-size: 130%;
+  display: flex;
+  list-style: none;
+  gap: 60px;
+}
+
+nav ul li a {
+  color: var(--texto);
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s ease;
+  display: inline-block;
+}
+
+nav ul li a:hover {
+  transform: scale(1.4);
+  color: var(--hover);
+}
+
+/* seções */
+section {
+  padding: 130px 20px;
+  min-height: 100vh;
+  background: var(--bg);
+}
+/* HOME ---------------------- */
+
+#home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* container */
+.home-container {
+  width: 100%;
+  max-width: 1600px;
+
+  padding: 0 40px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 100px;
+
+  flex-wrap: wrap;
+}
+
+/* texto */
+.home-texto {
+  flex: 1;
+  min-width: 300px;
+}
+
+.home-texto h1 {
+  font-size: 70px;
+
+  line-height: 1.2;
+
+  margin-bottom: 20px;
+}
+
+.home-texto p {
+  font-size: 22px;
+
+  color: var(--texto-sec);
+
+  max-width: 600px;
+
+  line-height: 1.8;
+}
+
+/* imagem */
+.home-imagem {
+  flex: 1;
+
+  display: flex;
+  justify-content: center;
+  
+}
+
+/* foto */
+.home-imagem img {
+  width: 420px;
+  height: 420px;
+
+  object-fit: cover;
+  object-position: center; 
+
+  border-radius: 50%;
+
+  border: 4px solid var(--grad2);
+
+  box-shadow: 0 10px 40px var(--grad2);
+}
+
+/* aba sobre ----------------------------*/
+#sobre-mim {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 100vh;
+}
+
+/* container */
+.sobre-container {
+  width: 100%;
+  max-width: 1200px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 80px;
+
+  margin: 0 auto;/* jogando um pouco para o centro */
+  padding: 0 10%;
+}
+
+/* esquerda */
+.sobre-texto {
+  flex: 1;
+  min-width: 300px;
+}
+
+.sobre-texto h2 {
+  font-size: 55px;
+  margin-bottom: 20px;
+}
+
+.sobre-texto p {
+  max-width: 550px;
+
+  color: var(--texto-sec);
+
+  line-height: 1.8;
+
+  font-size: 18px;
+}
+
+/* links */
+.sobre-links {
+  display: flex;
+  gap: 40px;
+
+  margin-top: 30px;
+}
+
+.sobre-links a {
+  text-decoration: none;
+
+  color: var(--texto);
+
+  padding: 12px 25px;
+
+  border-radius: 12px;
+
+  background: var(--card);
+
+  border: 1px solid var(--borda);
+
+  transition: 0.3s;
+}
+
+.sobre-links a:hover {
+  transform: translateY(-3px);
+
+  border-color: var(--grad2);
+
+  box-shadow: 0 5px 20px rgba(46,113,248,0.3);
+}
+
+/* direita */
+.sobre-cards {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 20px;
+  
+  width: 50%;
+}
+
+.warper-minicard , .skills{
+  width: 100%;
+  height: 50%;
+}
+.warper-minicard{
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* mini cards ---------------------*/
+.mini-card-cursos{
+  width: 93%;
+  height: 100%;
+  padding: 20px;
+
+  border-radius: 20px;
+
+  background: var(--card);
+
+  border: 1px solid var(--borda);
+
+  transition: 0.3s;
+
+  box-shadow: 0 5px 15px rgba(0, 106, 255, 0.2);
+}
+
+.mini-card-cursos:hover {
+  transform: translateY(-5px);
+
+  border-color: var(--grad2);
+
+  background: var(--bg-sec);
+}
+
+.mini-card-cursos h3 {
+  margin-bottom: 10px;
+}
+
+.mini-card-cursos p {
+  color: var(--texto-sec);
+}
+
+.mini-card {
+  background: var(--card);
+
+  border: 1px solid var(--borda);
+
+  padding: 20px;
+
+  width: 45%;
+
+  border-radius: 20px;
+
+  transition: 0.3s;
+
+  box-shadow: 0 5px 15px rgba(0, 106, 255, 0.2);
+}
+
+.mini-card:hover {
+  transform: translateY(-5px);
+
+  border-color: var(--grad2);
+
+  background: var(--bg-sec);
+}
+
+.mini-card h3 {
+  margin-bottom: 10px;
+}
+
+.mini-card p {
+  color: var(--texto-sec);
+}
+
+.skills { /* cards menores---------------------- */
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+
+  margin-top: 20px;
+
+  grid-column: 1 / -1;
+}
+
+.skill-card {
+  background: var(--card);
+
+  border: 1px solid var(--borda);
+
+  padding: 10px 18px;
+
+  border-radius: 99px;
+
+  color: var(--texto);
+
+  font-size: 15px;
+
+  transition: 0.3s;
+}
+
+.skill-card:hover {
+  transform: translateY(-3px);
+
+  border-color: var(--grad2);
+
+  box-shadow: 0 5px 15px rgba(46,113,248,0.3);
+}
+
+/* cards projetos -------------------------- */
+.titulo-projetos {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.titulo-projetos h1 {
+  font-style: italic;
+  font-size: 60px;
+  max-width: 900px;
+  margin: 0 auto 25px;
+  line-height: 1.1;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+  justify-content: center;
+}
+
+.card{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex-wrap: wrap;
+  position: relative;
+  background: var(--card);
+  border: 1px solid var(--borda);
+  color: var(--texto);
+  transition: 0.3s;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 10px;
+  
+  overflow: hidden;
+  max-width: 600px;
+  width: calc(50% - 20px);
+}
+
+.card:hover {
+  transform: translateY(-3px);
+
+  border-color: var(--grad2);
+
+  box-shadow: 0 5px 15px rgba(46,113,248,0.3);
+}
+
+.btn-card { /* botão ver projeto no canto do card */
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  
+
+  font-size: 18px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+
+  background: linear-gradient(
+    to right,
+    var(--grad1),
+    var(--grad2),
+    var(--grad3)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+}
+
+/* imagem com fundo ---------------*/
+.imagem {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+}
+
+.imagem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* camada escura por cima */
+.imagem::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+}
+
+.overlay {
+  position: absolute;
+  inset:0;
+  z-index: 2;
+  padding: 30px;
+
+}
+
+.overlay h1 {
+  font-size: 40px;
+  max-width: 500px;
+}
+
+.overlay span {
+  font-weight: bold;
+}
+
+
+/* parte de baixo */
+.conteudo {
+  padding: 20px;
+  padding-bottom: 70px;
+  
+}
+
+/* contato -----------------------------*/
+.contato-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+
+  min-height: 80vh;
+  flex-wrap: wrap;
+}
+
+.contato-texto {
+  max-width: 400px;
+}
+
+.contato-texto h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.contato-texto p {
+  color: var(--texto-sec);
+  font-size: 18px;
+}
+
+/* formulário -------------------*/
+form {
+  width: 100%;
+  max-width: 400px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+
+  border: 1px solid var(--borda);
+  border-radius: 10px;
+
+  background: var(--card);
+  color: var(--texto);
+}
+
+textarea {
+  min-height: 120px;
+  resize: none;
+}
+
+button {
+  width: 100%;
+
+  padding: 15px;
+
+  border: none;
+  border-radius: 12px;
+
+  cursor: pointer;
+
+  font-size: 16px;
+  font-weight: bold;
+
+  color: white;
+
+  background: linear-gradient(
+    to right,
+    var(--bg),
+    var(--grad3),
+    var(--bg-sec)
+  );
+
+  transition: 0.3s ease;
+
+  box-shadow: var(--grad2) 0 5px 10px;
+}
+
+
+button:hover {
+  transform: translateY(-3px);
+  filter: brightness(1.2);
+}
+
+
+
+.menu-toggle{/* so pra não aparecer em pc*/
+  display:none;
+}
+
+footer{
+  text-align: center;
+  padding: 30px;
+  background-color: var(--header);
+  color: var(--texto-sec);
+  border-top: 1px solid var(--borda);
+}
+
+  @media (max-width: 480px) {
+
+  section {
+    padding: 80px 15px;
+  }
+
+  /* HOME */
+  .home-container {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 30px;
+    padding: 0;
+  }
+
+  .home-texto h1 {
+    font-size: 38px;
+    line-height: 1.1;
+  }
+
+  .home-texto p {
+    font-size: 15px;
+  }
+
+  .home-imagem img {
+    width: 220px;
+    height: 220px;
+  }
+
+  /* SOBRE */
+  .sobre-container {
+    flex-direction: column;
+    padding: 0;
+    gap: 40px;
+  }
+
+  .sobre-texto {
+    text-align: center;
+  }
+
+  .sobre-texto h2 {
+    font-size: 38px;
+  }
+
+  .sobre-links {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .sobre-cards {
+    width: 100%;
+  }
+
+  .mini-card,
+  .mini-card-cursos {
+    width: 100%;
+  }
+
+  /* PROJETOS */
+  .card {
+    width: 100%;
+    margin: 0;
+  }
+
+  .overlay h1 {
+    font-size: 28px;
+  }
+
+  /* CONTATO */
+  .contato-container {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .contato-texto {
+    text-align: center;
+  }
+}
+
+  @media(max-width: 680px) {
+
+  nav ul {
+    display: flex;
+    flex-direction: column;
+
+    position: fixed;
+    top: 0;
+    right: -250px;
+
+    width: 180px;
+    height: 100vh;
+
+    background: var(--header);
+
+    padding: 50px 20px;
+
+    gap: 10px;
+
+    transition: right 0.3s ease;
+
+    z-index: 999;
+  }
+
+  nav ul.active {
+    right: 0;
+  }
+
+  nav ul li {
+    margin: 0;
+    text-align: left;
+  }
+
+  nav ul li a {
+    font-size: 24px;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .menu-toggle {
+    display: block;
+
+    font-size: 40px;
+
+    cursor: pointer;
+
+    position: fixed;
+
+    top: 10px;
+    right: 10px;
+
+    z-index: 1000;
+  }
+
+  .warper-minicard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+  @media (max-width: 790px) {
+
+    nav {
+    position: static;       /* remove o centralizado */
+    transform: none;       
+    margin-left: auto;      /* joga pro canto direito */
+    }
+
+    nav ul {
+    font-size: 100%;
+    gap: 20px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s ease;
+      display: inline-block;
+      text-align: right;
+    } 
+
+#sobre-mim {
+  display: block;
+}
+
+.sobre-container {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+
+  padding: 0 20px;
+
+  gap: 80px;
+}
+
+.sobre-texto {
+  width: 100%;
+
+  text-align: center;
+}
+
+.sobre-texto p {
+  max-width: 100%;
+}
+
+.sobre-links {
+  justify-content: center;
+
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.sobre-cards {
+  width: 100%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 20px;
+
+  margin-top: 40px;
+}
+}
+  @media (max-width: 1200px) {
+
+    nav {
+    position: static;       /* remove o centralizado */
+    transform: none;       
+    margin-left: auto;      /* joga pro canto direito */
+    }
+
+    nav ul {
+      font-size: 130%;
+      gap: 60px;
+    }
+}
+  @media (min-width: 2300px) {
+
+  body {
+    font-size: 30px;
+    padding-top: 200px;
+  }
+
+  header {
+  height: 200px;
+  }
+
+  nav ul a {
+    font-size: 140%;
+    margin: 0 auto;
+  }
+
+  .logo {
+    font-size: 70px;
+    padding: 15px;
+  }
+
+  section {
+  padding: 200px 20px;
+  }
+}
+
+
+    
+
+

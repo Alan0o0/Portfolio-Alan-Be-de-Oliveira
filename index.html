@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Alan-B-de-Oliveira</title>
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+<body>
+
+    <header>
+      <h1 class="logo"> Alan Benvenuto</h1>
+
+      
+
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#sobre-mim">Sobre</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<!-- Pagina inicial -->
+
+  <section id="home">
+    <div class="home-container">
+
+    <!-- texto -->
+    <div class="home-texto">
+
+      <h1>
+        Olá, eu sou <span>Alan Benvenuto de Oliveira</span>
+      </h1>
+
+      <p>
+        Olá, Meu nome é <span> Alan</span>, tenho 19 anos e sou estudante de Ciência da Computação.
+        Tenho formação técnica em Informática para Internet e experiência com <span>GitHub</span>,<span> CSS</span>, <span>HTML</span>, <span>Java</span>, <span>Python</span>, <span>SQL</span> e <span>Google Cloud</span>, além de interesse em computação em nuvem.
+        Gosto de unir criatividade e lógica para desenvolver soluções práticas e inovadoras, sempre buscando aprender mais e evoluir tanto nos estudos quanto na prática.
+      </p>
+
+    </div>
+
+    <!-- foto -->
+    <div class="home-imagem">
+
+      <img src="imagens/selfie.jpg" alt="Alan">
+
+    </div>
+
+  </div>
+
+  </section>
+
+<!-- Sobre-mim -->
+
+ <section id="sobre-mim">
+
+  <div class="sobre-container">
+
+    <!-- lado esquerdo -->
+    <div class="sobre-texto">
+
+      <h2>Sobre <span>mim</span></h2>
+
+      <p>
+        Eu entrei na área de programação por causa dos <span>jogos</span>, sempre tive curiosidade em entender como eram feitos. 
+        Com o tempo, desenvolvi uma perspectiva muito melhor sobre isso e hoje me dedico ao <span>backend</span> tanto ao <span>frontend</span> por meio de <span>projetos acadêmicos</span>.
+         Desde que comecei a faculdade, venho estudando e me aprofundando cada vez mais nessa área. 
+      </p>
+      <div class="sobre-links">
+
+        <a href="https://www.linkedin.com/in/alan-b-de-oliveira/" target="_blank">
+          LinkedIn ↗
+        </a>
+
+        <a href="https://github.com/Alan0o0" target="_blank">
+          GitHub ↗
+        </a>
+
+      </div>
+
+    </div>
+
+    </div>
+
+    <!-- lado direito -->
+    <div class="sobre-cards">
+      <div class="warper-minicard"> 
+
+      <div class="mini-card">
+        <h3>🎓 Formação</h3>
+        <p>
+          Bacharelado em Ciência da Computação - <span>Uninter</span> (2025-2029)
+        </p>
+      </div>
+
+      <div class="mini-card">
+        <h3> 🌐 Idiomas</h3>
+        <p> Português — Nativo <br>
+            Inglês — Basico</p>
+      </div>
+
+      <div class="mini-card">
+        <h3> 🚀 Experiência</h3>
+        <p>Apenas projetos academicos</p>
+      </div>
+
+      <div class="mini-card">
+        <h3>🚀 Objetivo</h3>
+        <p>Primeira oportunidade em tecnologia</p>
+      </div>
+
+      <div class="mini-card-cursos">
+        <h3> 📚 Cursos</h3>
+        <p> Google Cloud Computing Foundations - Google <br>
+            Excel 2016 Avançado - Instituto Mix <br>
+            Algoritmos e Lógica de Programação - Udemy</p>
+      </div>
+
+      
+      
+    </div>
+      <div class="skills">
+
+  <div class="skill-card">● Java</div>
+  <div class="skill-card">● Python</div>
+  <div class="skill-card">● Google Cloud</div>
+  <div class="skill-card">● SQL</div>
+  <div class="skill-card">● Git & GitHub</div>
+  <div class="skill-card">● BPMN e UML</div>
+  <div class="skill-card">● XML</div>
+  <div class="skill-card">● JavaScript</div>
+  <div class="skill-card">● HTML</div>
+  <div class="skill-card">● CSS</div>
+
+</div>
+
+    </div>
+
+  
+
+</section>
+
+<!-- Projetos  -->
+
+<section id="projetos"> 
+  <div class="titulo-projetos"> 
+    <h1> Proj<span>etos</span> </h1>
+  </div>
+  <div class="cards-container"> <!-- aqui guarda os card -->
+    
+
+      
+<!-- ---------------- -->      
+
+      <div class="card">
+    <div class="imagem">
+      <img src="imagens/projeto1.jpg" alt="">
+      <div class="overlay">
+        <h1>Projeto backend para gerenciamento de uma lista de <span>jogos</span></h1>
+      </div>
+      
+    </div>
+       <a class="btn-card" rel="stylesheet" href="https://github.com/Alan0o0/Game-Manager-API" target="_blank">Ver projeto</a>
+    <div class="conteudo">
+      <h3>Sobre o projeto</h3>
+      <p><span>Game-Manager-API</span> é uma aplicação desenvolvida em <span>Spring Boot</span>, estruturada em <span>arquitetura em camadas</span> (Domain, Repository, Service e Controller). Conta com integração via <span>ORM</span> para persistência de dados e possui <span>seed automática</span> do banco, garantindo inicialização rápida e prática para desenvolvimento e testes.</p>
+    </div>
+
+  </div>
+<!-- Card 2   -->
+  <div class="card" id="card2">
+    <div class="imagem">
+      <img src="imagens/projeto2.jpg" alt="">
+      <div class="overlay">
+        <h1>Consumo de Api para <span>consultar ceps</span> brasileiros</h1>
+      </div>
+      
+    </div>
+        <a class="btn-card" rel="stylesheet" href="https://github.com/Alan0o0/Consulta-Cep" target="_blank">Ver projeto</a>
+    <div class="conteudo">
+      <h3>Sobre o projeto</h3>
+      <p><span>Consulta-Cep</span> é uma aplicação desenvolvida apenas em <span>Java </span>, que realiza <span>consultas de CEP</span> de forma rápida e eficiente, retornando informações como rua, bairro, cidade e estado.
+         O projeto demonstra conhecimentos em <span>POO</span>, <span>requisições HTTP</span> e <span>consumo de APIs</span>, oferecendo uma solução prática para <span>automatizar consultas</span> de endereço.</p>
+    </div>
+
+  </div>
+
+</div>
+
+</section>
+ 
+<!-- Contato -->
+  <section id="contato">
+
+  <div class="contato-container">
+
+    <div class="contato-texto">
+      <h2>Contato</h2>
+      <p>
+        Se quiser conversar sobre projetos, oportunidades ou simplesmente trocar ideias, estou à disposição. 
+        Gosto de construir conexões e acredito que boas conversas podem abrir caminhos incríveis.
+      </p>
+    </div>
+
+<form 
+  action="https://formsubmit.co/oalan2796@gmail.com" 
+  method="POST" 
+  target="_blank"
+  onsubmit="mensagemEnviada()"
+>
+
+  <input type="text" name="nome" placeholder="Seu nome" required>
+
+  <input type="email" name="email" placeholder="Seu email" required>
+
+  <textarea name="mensagem" placeholder="Sua mensagem" required></textarea>
+
+  <button type="submit">Enviar</button>
+
+</form>
+    
+  </div>
+
+</section>
+
+<footer>
+      <p> 2026 - Desenvolvido por Alan Benvenuto.<br>
+        Este site foi criado como parte de um projeto academico, com foco em desenvolvimento web e aplicações.<br>
+        Todos os direitos reservados a Alan Benvenuto de Oliveira.</p>
+    </footer>
+
+
+<script src="script.js"></script>
+</body>
+</html>
