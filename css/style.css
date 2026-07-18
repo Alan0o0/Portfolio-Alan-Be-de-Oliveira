@@ -58,10 +58,15 @@ h1, h2 {
   color: var(--texto-claro);
 }
 
+header h1{
+  margin: 0%;
+  padding: 0%;
+}
+
 header h1 a{/* logo */
   width: 100px;
   font-size: 40px;
-  font-weight: bold, sans-serif, monospace, cursive, sans-serif, serif;
+  font-weight:  bolder;
   text-decoration: none;
   color: var(--texto);
 }
@@ -221,7 +226,7 @@ section {
 
   gap: 80px;
 
-  margin: 0 auto;/* jogando um pouco para o centro */
+  margin: 0 auto;
   padding: 0 10%;
 }
 
@@ -238,7 +243,7 @@ section {
 }
 
 .sobre-texto p {
-  max-width: 550px;
+  max-width: 700px;
 
   color: var(--texto-sec);
 
@@ -440,13 +445,16 @@ section {
   
   overflow: hidden;
   max-width: 600px;
-  width: calc(50% - 20px);
+  flex-basis: 300px;
+  flex-grow: 1;
 }
 
 .card:hover {
   transform: translateY(-3px);
 
   border-color: var(--borders);
+
+  background: var(--bg-sec);
 
 }
 
@@ -559,6 +567,8 @@ textarea {
   border: 1px solid var(--borda);
   border-radius: 10px;
 
+  font-family: sans-serif, Courier, monospace;
+
   background: var(--card);
   color: var(--texto);
 }
@@ -566,6 +576,32 @@ textarea {
 textarea {
   min-height: 120px;
   resize: none;
+  
+}
+
+.input-container{
+    position: relative;
+    margin: 10px 0;
+}
+
+.input-container label{
+    position: absolute;
+    left: 5px;
+    top: 20px;
+    padding: 0 5px;
+    background: var(--card);
+    color: #888;
+    pointer-events: none;
+    transition: .2s;
+    border-radius: 5px;
+}
+
+.input-container :is(input, textarea):focus + label,
+.input-container input:not(:placeholder-shown) + label,
+.input-container textarea:valid + label{
+    top: -12px;
+    font-size: 15px;
+    color: var(--texto);
 }
 
 button {
@@ -755,25 +791,36 @@ footer{
 }
   @media (max-width: 790px) {
 
-    nav {
-    position: static;       /* remove o centralizado */
-    transform: none;       
-    margin-left: auto;      /* joga pro canto direito */
-    }
+nav {
+  position: static;       /* remove o centralizado */
+  transform: none;       
+  margin-left: auto;      /* joga pro canto direito */
+}
 
-    nav ul {
-    font-size: 100%;
-    gap: 20px;
-    }
+nav ul {
+  font-size: 100%;
+  gap: 20px;
+}
 
-    nav ul li a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-      transition: 0.3s ease;
-      display: inline-block;
-      text-align: right;
-    } 
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s ease;
+  display: inline-block;
+  text-align: right;
+}
+    
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+  justify-content: center;
+}
+
+.card {
+    width: 100%;
+  }
 
 #sobre-mim {
   display: block;
@@ -796,8 +843,9 @@ footer{
   text-align: center;
 }
 
-.sobre-texto p {
+.sobre-texto p, .sobre-texto h2 {
   max-width: 100%;
+  text-align: center;
 }
 
 .sobre-links {
@@ -818,44 +866,160 @@ footer{
 
   margin-top: 40px;
 }
+.mini-card , .mini-card-cursos{
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
 }
-  @media (max-width: 1200px) {
-
-    nav {
-    position: static;       /* remove o centralizado */
-    transform: none;       
-    margin-left: auto;      /* joga pro canto direito */
-    }
-
-    nav ul {
-      font-size: 130%;
-      gap: 60px;
-    }
+.warper-minicard ,.skills{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
 }
-  @media (min-width: 2300px) {
 
-  body {
-    font-size: 30px;
-    padding-top: 200px;
-  }
 
-  header {
-  height: 200px;
-  }
 
-  nav ul a {
-    font-size: 140%;
-    margin: 0 auto;
   }
+  @media (max-width: 1300px) {
 
-  .logo {
-    font-size: 70px;
-    padding: 15px;
-  }
+nav {
+position: static;       /* remove o centralizado */
+transform: none;       
+margin-left: auto;      /* joga pro canto direito */
+}
 
-  section {
-  padding: 200px 20px;
-  }
+nav ul {
+  font-size: 130%;
+  gap: 60px;
+}
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+  justify-content: center;
+}
+
+.sobre-container {
+  display: flex;
+  flex-direction: column;
+
+  width: 60%;
+
+  padding: 0 20px;
+
+  gap: 80px;
+}
+
+.sobre-texto {
+  width: 100%;
+  text-align: left;
+}
+
+.warper-minicard ,.skills{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+}
+
+ @media (max-width: 2300px) {
+  .cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+  justify-content: center;
+}
+
+.sobre-container {
+  display: flex;
+  flex-direction: column;
+
+  width: 60%;
+
+  padding: 0 20px;
+
+  gap: 80px;
+}
+
+.sobre-texto {
+  width: 100%;
+  text-align: left;
+}
+
+.warper-minicard ,.skills{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+ }
+
+@media (min-width: 2300px) {
+
+body {
+  font-size: 30px;
+  padding-top: 200px;
+}
+
+header {
+height: 200px;
+}
+
+nav ul a {
+  font-size: 140%;
+  margin: 0 auto;
+}
+
+.logo {
+  font-size: 70px;
+  padding: 15px;
+}
+
+section {
+padding: 200px 20px;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+  justify-content: center;
+}
+
+.card {
+    width: 100%;
+    flex-basis: 300px;
+    flex-grow: 1;
+}
+
+.sobre-container {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+
+  width: 60%;
+
+  padding: 0 20px;
+
+  gap: 80px;
+}
+
+.sobre-texto {
+  width: 100%;
+  text-align: left;
+}
+
+.warper-minicard ,.skills{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
 }
 
 

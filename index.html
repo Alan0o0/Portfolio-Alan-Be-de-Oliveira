@@ -167,7 +167,10 @@
        <a class="btn-card" rel="stylesheet" href="https://github.com/Alan0o0/Game-Manager-API" target="_blank">Ver projeto</a>
     <div class="conteudo">
       <h3>Sobre o projeto</h3>
-      <p><span>Game-Manager-API</span> é uma aplicação desenvolvida em <span>Spring Boot</span>, estruturada em <span>arquitetura em camadas</span> (Domain, Repository, Service e Controller). Conta com integração via <span>ORM</span> para persistência de dados e possui <span>seed automática</span> do banco, garantindo inicialização rápida e prática para desenvolvimento e testes.</p>
+      <p><span>Game-Manager-API</span> é uma aplicação desenvolvida em 
+        <span>Spring Boot</span>, estruturada em <span>arquitetura em camadas</span> (Domain, Repository, Service e Controller). 
+        Conta com integração via <span>ORM</span> para persistência de dados e possui 
+        <span>seed automática</span> do banco, garantindo inicialização rápida e prática para desenvolvimento e testes.</p>
     </div>
 
   </div>
@@ -183,8 +186,39 @@
         <a class="btn-card" rel="stylesheet" href="https://github.com/Alan0o0/Consulta-Cep" target="_blank">Ver projeto</a>
     <div class="conteudo">
       <h3>Sobre o projeto</h3>
-      <p><span>Consulta-Cep</span> é uma aplicação desenvolvida apenas em <span>Java </span>, que realiza <span>consultas de CEP</span> de forma rápida e eficiente, retornando informações como rua, bairro, cidade e estado.
-         O projeto demonstra conhecimentos em <span>POO</span>, <span>requisições HTTP</span> e <span>consumo de APIs</span>, oferecendo uma solução prática para <span>automatizar consultas</span> de endereço.</p>
+      <p><span>Consulta-Cep</span> é uma aplicação desenvolvida apenas em 
+        <span>Java </span>, que realiza <span>consultas de CEP</span> de forma rápida e eficiente, 
+        retornando informações como rua, bairro, cidade e estado.
+        O projeto demonstra conhecimentos em <span>POO</span>, 
+        <span>requisições HTTP</span> e <span>consumo de APIs</span>, oferecendo uma solução prática para 
+        <span>automatizar consultas</span> de endereço.</p>
+    </div>
+
+  </div>
+<!-- Card 3   -->
+  <div class="card" id="card3">
+    <div class="imagem">
+      <img src="imagens/projeto3.jpg" alt="">
+      <div class="overlay">
+        <h1>Sistema de <span>Agendamento</span> de Horários</h1>
+      </div>
+      
+    </div>
+
+      <a class="btn-card" rel="stylesheet" href="https://github.com/Alan0o0/Agendador-Horarios" target="_blank">Ver projeto</a>
+
+    <div class="conteudo">
+      <h3>Sobre o projeto</h3>
+      <p>
+      <span>Agendador-Horarios</span> é uma <span>API REST</span> desenvolvida em
+      <span>Java</span> utilizando <span>Spring Boot</span>, que permite
+      <span>cadastrar</span>, <span>consultar</span>,
+      <span>alterar</span> e <span>remover agendamentos</span>.
+      O projeto utiliza <span>Spring Data JPA</span>, <span>Lombok</span>,
+      <span>H2 Database</span> e <span>Maven</span>, além de implementar
+      <span>tratamento global de exceções</span> e regras para evitar
+      conflitos de horários, seguindo boas práticas no desenvolvimento de APIs.
+    </p>
     </div>
 
   </div>
@@ -212,12 +246,17 @@
   target="_blank"
   onsubmit="mensagemEnviada()"
 >
+  <div class="input-container">
+    <input type="text" name="nome" required placeholder=" " ><label >Seu nome</label>
+  </div>
 
-  <input type="text" name="nome" placeholder="Seu nome" required>
+  <div class="input-container">
+    <input type="email" name="email" required placeholder=" " ><label>Seu email</label>
+  </div>
 
-  <input type="email" name="email" placeholder="Seu email" required>
-
-  <textarea name="mensagem" placeholder="Sua mensagem" required></textarea>
+  <div class="input-container">
+    <textarea name="mensagem" required placeholder=" " ></textarea><label>Sua mensagem</label>
+  </div>
 
   <button type="submit">Enviar</button>
 
