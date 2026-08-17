@@ -27,6 +27,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 /* formulário contato */
 const form = document.getElementById("formContato");
 
+
 form.addEventListener("submit", function(e) {
   e.preventDefault();
 
