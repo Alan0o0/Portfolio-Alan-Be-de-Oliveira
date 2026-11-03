@@ -1,279 +1,522 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Alan-B-de-Oliveira</title>
-    <link rel="stylesheet" href="css/style.css">
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alan Benvenuto | Desenvolvedor Backend</title>
+  
+  <!-- fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  
+  <!-- css e favicon -->
+  <link rel="icon" type="image/svg+xml" href="imagens/favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <header>
-      <h1><a href="#home">Alan Benvenuto</a> </h1>
+  <!-- header -->
+  <header class="main-header" id="topHeader">
+    <div class="header-container">
+      <a href="#home" class="brand-logo">
+        <span class="logo-cube">A³</span>
+        <div class="logo-text">
+          <span class="name">Alan Benvenuto</span>
+          <span class="sub">Desenvolvedor Backend</span>
+        </div>
+      </a>
 
-      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-    <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#sobre-mim">Sobre</a></li>
-        <li><a href="#projetos">Projetos</a></li>
-        <li><a href="#contato">Contato</a></li>
-      </ul>
-    </nav>
+      <button class="mobile-toggle" id="menuToggle" aria-label="Abrir Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav-menu" id="navMenu">
+        <ul>
+          <li><a href="#home" class="nav-link active"><span class="nav-num">01</span> Início</a></li>
+          <li><a href="#sobre-mim" class="nav-link"><span class="nav-num">02</span> Sobre</a></li>
+          <li><a href="#habilidades" class="nav-link"><span class="nav-num">03</span> Habilidades</a></li>
+          <li><a href="#projetos" class="nav-link"><span class="nav-num">04</span> Projetos</a></li>
+          <li><a href="#contato" class="nav-link nav-btn"><span class="nav-num">05</span> Contato</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-<!-- Pagina inicial -->
-
-  <section id="home">
-    <div class="home-container">
-
-    <!-- texto -->
-    <div class="home-texto">
-
-      <h1>
-        Olá, eu sou <span>Alan Benvenuto de Oliveira</span>
-      </h1>
-
-      <p>
-        Olá, Meu nome é <span> Alan</span>, tenho 19 anos e sou estudante de Ciência da Computação.
-        Tenho formação técnica em Informática para Internet e experiência com <span>GitHub</span>,<span> CSS</span>, <span>HTML</span>, <span>Java</span>, <span>Python</span>, <span>SQL</span> e <span>Google Cloud</span>, além de interesse em computação em nuvem.
-        Gosto de unir criatividade e lógica para desenvolver soluções práticas e inovadoras, sempre buscando aprender mais e evoluir tanto nos estudos quanto na prática.
-      </p>
-
-    </div>
-
-    <!-- foto -->
-    <div class="home-imagem">
-
-      <img src="imagens/selfie.jpg" alt="Alan">
-
-    </div>
-
-  </div>
-
-  </section>
-
-<!-- Sobre-mim -->
-
- <section id="sobre-mim">
-
-  <div class="sobre-container">
-
-    <!-- lado esquerdo -->
-    <div class="sobre-texto">
-
-      <h2>Sobre <span>mim</span></h2>
-
-      <p>
-        Eu entrei na área de programação por causa dos <span>jogos</span>, sempre tive curiosidade em entender como eram feitos. 
-        Com o tempo, desenvolvi uma perspectiva muito melhor sobre isso e hoje me dedico ao <span>backend</span> tanto ao <span>frontend</span> por meio de <span>projetos acadêmicos</span>.
-         Desde que comecei a faculdade, venho estudando e me aprofundando cada vez mais nessa área. 
-      </p>
-      <div class="sobre-links">
-
-        <a href="https://www.linkedin.com/in/alan-b-de-oliveira/" target="_blank">
-          LinkedIn ↗
-        </a>
-
-        <a href="https://github.com/Alan0o0" target="_blank">
-          GitHub ↗
-        </a>
-
-      </div>
-
-    </div>
-
-    </div>
-
-    <!-- lado direito -->
-    <div class="sobre-cards">
-      <div class="warper-minicard"> 
-
-      <div class="mini-card">
-        <h3><span class="underline">Formação</span></h3>
-        <p>
-          Bacharelado em Ciência da Computação - <span>Uninter</span> (2025-2029)
-        </p>
-      </div>
-
-      <div class="mini-card">
-        <h3><span class="underline">Idiomas </span></h3>
-        <p> Português — Nativo <br>
-            Inglês — Basico</p>
-      </div>
-
-      <div class="mini-card">
-        <h3> <span class="underline">Experiência </span></h3>
-        <p>Apenas projetos academicos</p>
-      </div>
-
-      <div class="mini-card">
-        <h3><span class="underline">Objetivo </span></h3>
-        <p>Primeira oportunidade em tecnologia</p>
-      </div>
-
-      <div class="mini-card-cursos">
-        <h3><span class="underline">Cursos </span></h3>
-        <p> Google Cloud Computing Foundations - Google <br>
-            Excel 2016 Avançado - Instituto Mix <br>
-            Algoritmos e Lógica de Programação - Udemy</p>
-      </div>
-
+  <main>
+    <!-- inicio -->
+    <section id="home" class="section hero-section">
+      <div class="section-tag">01 / APRESENTAÇÃO</div>
       
-      
-    </div>
-      <div class="skills">
+      <div class="hero-grid">
+        <!-- texto principal -->
+        <div class="hero-content">
+          <div class="status-pill">
+            <span class="status-dot"></span> Disponível para novas oportunidades & projetos
+          </div>
+          
+          <h1 class="hero-title">
+            Desenvolvendo <span class="highlight-text">soluções de backend</span> estruturadas, eficientes e escaláveis.
+          </h1>
 
-  <div class="skill-card">● Java</div>
-  <div class="skill-card">● Python</div>
-  <div class="skill-card">● Google Cloud</div>
-  <div class="skill-card">● SQL</div>
-  <div class="skill-card">● Git & GitHub</div>
-  <div class="skill-card">● BPMN e UML</div>
-  <div class="skill-card">● XML</div>
-  <div class="skill-card">● JavaScript</div>
-  <div class="skill-card">● HTML</div>
-  <div class="skill-card">● CSS</div>
+          <p class="hero-desc">
+            Olá, meu nome é <strong>Alan Benvenuto de Oliveira</strong>, tenho 19 anos e curso Ciência da Computação.
+            Minha paixão por tecnologia começou pela curiosidade em entender a engenharia por trás dos jogos.
+            Hoje, concentro meu foco na construção de APIs REST, microsserviços e integração com bancos de dados 
+            utilizando <strong>Java (Spring Boot)</strong>, <strong>Python</strong> e <strong>Google Cloud</strong>.
+          </p>
 
-</div>
+          <div class="hero-actions">
+            <a href="#projetos" class="btn-primary">Ver Projetos</a>
+            <a href="https://github.com/Alan0o0" target="_blank" rel="noopener noreferrer" class="btn-secondary">GitHub ↗</a>
+            <a href="https://www.linkedin.com/in/alan-b-de-oliveira/" target="_blank" rel="noopener noreferrer" class="btn-secondary">LinkedIn ↗</a>
+          </div>
 
-    </div>
+          <div class="hero-metrics">
+            <div class="metric-box">
+              <span class="metric-num">2025&ndash;2029</span>
+              <span class="metric-label">Ciência da Computação (UNINTER)</span>
+            </div>
+            <div class="metric-box">
+              <span class="metric-num">3+</span>
+              <span class="metric-label">APIs & Projetos em Destaque</span>
+            </div>
+            <div class="metric-box">
+              <span class="metric-num">GCP</span>
+              <span class="metric-label">Cloud Computing Foundations</span>
+            </div>
+          </div>
+        </div>
 
-  
+        <!-- card lateral com resumo -->
+        <div class="hero-showcase">
+          <div class="showcase-card">
+            <div class="card-corner tl"></div><div class="card-corner tr"></div>
+            <div class="card-corner bl"></div><div class="card-corner br"></div>
 
-</section>
+            <div class="showcase-header">
+              <span class="mono-tag">CORE // STACK & ARCHITECTURE</span>
+              <span class="badge-mini">BACKEND</span>
+            </div>
 
-<!-- Projetos  -->
+            <div class="showcase-body">
+              <div class="stack-block">
+                <span class="stack-category">Linguagens Principais</span>
+                <p>Java &bull; Python &bull; SQL &bull; JavaScript</p>
+              </div>
 
-<section id="projetos"> 
-  <div class="titulo-projetos"> 
-    <h1> Proj<span>etos</span> </h1>
-  </div>
-  <div class="cards-container"> <!-- aqui guarda os card -->
-    
+              <div class="stack-block">
+                <span class="stack-category">Frameworks & Persistência</span>
+                <p>Spring Boot &bull; Spring Data JPA &bull; Hibernate &bull; H2 / MySQL</p>
+              </div>
 
-      
-<!-- ---------------- -->      
+              <div class="stack-block">
+                <span class="stack-category">Infraestrutura & Boas Práticas</span>
+                <p>Google Cloud &bull; Git/GitHub &bull; Arquitetura em Camadas &bull; REST APIs</p>
+              </div>
 
-      <div class="card">
-    <div class="imagem">
-      <img src="imagens/projeto1.jpg" alt="">
-      <div class="overlay">
-        <h1>Projeto backend para gerenciamento de uma lista de <span>jogos</span></h1>
+              <div class="showcase-footer">
+                <span class="mono-coords">[ ARQUITETURA // BACKEND ]</span>
+                <span class="indicator-active">SISTEMA ATIVO</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      
-    </div>
-       <a class="btn-card" rel="stylesheet" href="https://github.com/Alan0o0/Game-Manager-API" target="_blank">Ver projeto</a>
-    <div class="conteudo">
-      <h3>Sobre o projeto</h3>
-      <p><span>Game-Manager-API</span> é uma aplicação desenvolvida em 
-        <span>Spring Boot</span>, estruturada em <span>arquitetura em camadas</span> (Domain, Repository, Service e Controller). 
-        Conta com integração via <span>ORM</span> para persistência de dados e possui 
-        <span>seed automática</span> do banco, garantindo inicialização rápida e prática para desenvolvimento e testes.</p>
-    </div>
+    </section>
 
-  </div>
-<!-- Card 2   -->
-  <div class="card" id="card2">
-    <div class="imagem">
-      <img src="imagens/projeto2.jpg" alt="">
-      <div class="overlay">
-        <h1>Consumo de Api para <span>consultar ceps</span> brasileiros</h1>
+    <!-- sobre mim -->
+    <section id="sobre-mim" class="section">
+      <div class="section-tag">02 / PERFIL PROFISSIONAL</div>
+
+      <div class="section-heading">
+        <h2 class="section-title">Sobre Mim & <span class="highlight-text">Formação</span></h2>
+        <p class="section-subtitle">Conheça minha trajetória, objetivos acadêmicos e base de engenharia de software.</p>
       </div>
-      
-    </div>
-        <a class="btn-card" rel="stylesheet" href="https://github.com/Alan0o0/Consulta-Cep" target="_blank">Ver projeto</a>
-    <div class="conteudo">
-      <h3>Sobre o projeto</h3>
-      <p><span>Consulta-Cep</span> é uma aplicação desenvolvida apenas em 
-        <span>Java </span>, que realiza <span>consultas de CEP</span> de forma rápida e eficiente, 
-        retornando informações como rua, bairro, cidade e estado.
-        O projeto demonstra conhecimentos em <span>POO</span>, 
-        <span>requisições HTTP</span> e <span>consumo de APIs</span>, oferecendo uma solução prática para 
-        <span>automatizar consultas</span> de endereço.</p>
-    </div>
 
-  </div>
-<!-- Card 3   -->
-  <div class="card" id="card3">
-    <div class="imagem">
-      <img src="imagens/projeto3.jpg" alt="">
-      <div class="overlay">
-        <h1>Sistema de <span>Agendamento</span> de Horários</h1>
+      <div class="about-grid">
+        <!-- bio e foto -->
+        <div class="modular-box box-bio">
+          <div class="card-corner tl"></div><div class="card-corner tr"></div>
+          <div class="card-corner bl"></div><div class="card-corner br"></div>
+
+          <div class="box-header">
+            <span class="mono-code">PERFIL // ALAN BENVENUTO</span>
+            <span class="box-badge">BIOGRAFIA</span>
+          </div>
+
+          <div class="bio-layout">
+            <div class="avatar-frame">
+              <img src="imagens/selfie.jpg" alt="Alan Benvenuto" class="avatar-image">
+            </div>
+
+            <div class="bio-description">
+              <h3>Desenvolvedor focado em lógica e arquitetura</h3>
+              <p>
+                Iniciei no universo da programação fascinado por jogos eletrônicos e pelo desejo de entender os sistemas internos que os fazem funcionar.
+                Com o passar do tempo e o ingresso na faculdade, direcionei essa curiosidade técnica para a engenharia de backend e desenvolvimento web.
+              </p>
+              <p>
+                Gosto de unir pensamento lógico e estruturação de código para resolver problemas reais com segurança e escalabilidade.
+                Estou sempre aprofundando meus estudos em padrões de projetos, microsserviços e computação em nuvem.
+              </p>
+              
+              <div class="objective-callout">
+                <strong>Objetivo:</strong> Primeira oportunidade profissional em tecnologia (Estágio ou Júnior em Desenvolvimento Backend / Software).
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- competencias -->
+        <div class="modular-box box-competencies">
+          <div class="card-corner tl"></div><div class="card-corner tr"></div>
+          <div class="card-corner bl"></div><div class="card-corner br"></div>
+
+          <div class="box-header">
+            <span class="mono-code">COMPETÊNCIAS // DOMÍNIO TÉCNICO</span>
+            <span class="box-badge">AVALIAÇÃO</span>
+          </div>
+
+          <h3>Áreas de Concentração</h3>
+
+          <div class="skills-progress-list">
+            <div class="progress-item">
+              <div class="progress-info">
+                <span>Desenvolvimento Backend (Java & Spring Boot)</span>
+                <span class="progress-val">Avançado</span>
+              </div>
+              <div class="progress-bar"><div class="progress-fill" style="width: 88%"></div></div>
+            </div>
+
+            <div class="progress-item">
+              <div class="progress-info">
+                <span>Lógica de Programação & Estruturas de Dados</span>
+                <span class="progress-val">Avançado</span>
+              </div>
+              <div class="progress-bar"><div class="progress-fill" style="width: 90%"></div></div>
+            </div>
+
+            <div class="progress-item">
+              <div class="progress-info">
+                <span>Bancos de Dados & SQL / ORM</span>
+                <span class="progress-val">Intermediário</span>
+              </div>
+              <div class="progress-bar"><div class="progress-fill" style="width: 82%"></div></div>
+            </div>
+
+            <div class="progress-item">
+              <div class="progress-info">
+                <span>Computação em Nuvem (Google Cloud)</span>
+                <span class="progress-val">Intermediário</span>
+              </div>
+              <div class="progress-bar"><div class="progress-fill" style="width: 78%"></div></div>
+            </div>
+
+            <div class="progress-item">
+              <div class="progress-info">
+                <span>Desenvolvimento Web Essencial (HTML, CSS, JS)</span>
+                <span class="progress-val">Intermediário</span>
+              </div>
+              <div class="progress-bar"><div class="progress-fill" style="width: 75%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- formacao e cursos -->
+        <div class="modular-box box-full">
+          <div class="card-corner tl"></div><div class="card-corner tr"></div>
+          <div class="card-corner bl"></div><div class="card-corner br"></div>
+
+          <div class="box-header">
+            <span class="mono-code">ACADÊMICO // EDUCAÇÃO & CERTIFICADOS</span>
+            <span class="box-badge">REGISTRO</span>
+          </div>
+
+          <div class="academic-grid">
+            <div class="academic-item">
+              <div class="academic-icon">🎓</div>
+              <h4>Graduação</h4>
+              <p class="academic-title">Bacharelado em Ciência da Computação</p>
+              <span class="academic-institution">UNINTER (2025 &ndash; 2029)</span>
+            </div>
+
+            <div class="academic-item">
+              <div class="academic-icon">📜</div>
+              <h4>Cursos & Certificados</h4>
+              <ul class="academic-list">
+                <li>Google Cloud Computing Foundations &mdash; Google</li>
+                <li>Algoritmos e Lógica de Programação &mdash; Udemy</li>
+                <li>Excel 2016 Avançado &mdash; Instituto Mix</li>
+              </ul>
+            </div>
+
+            <div class="academic-item">
+              <div class="academic-icon">🌐</div>
+              <h4>Idiomas</h4>
+              <p><strong>Português:</strong> Nativo</p>
+              <p><strong>Inglês:</strong> Leitura e documentação técnica</p>
+            </div>
+          </div>
+        </div>
       </div>
-      
+    </section>
+
+    <!-- tecnologias -->
+    <section id="habilidades" class="section">
+      <div class="section-tag">03 / TECNOLOGIAS</div>
+
+      <div class="section-heading">
+        <h2 class="section-title">Habilidades & <span class="highlight-text">Ferramentas</span></h2>
+        <p class="section-subtitle">Tecnologias utilizadas no desenvolvimento de software e projetos acadêmicos.</p>
+      </div>
+
+      <div class="tech-grid">
+        <div class="tech-card">
+          <div class="tech-icon">☕</div>
+          <h3 class="tech-name">Java</h3>
+          <p class="tech-desc">Desenvolvimento orientado a objetos, consumo de APIs e criação de soluções robustas.</p>
+        </div>
+
+        <div class="tech-card">
+          <div class="tech-icon">🍃</div>
+          <h3 class="tech-name">Spring Boot</h3>
+          <p class="tech-desc">Construção de APIs REST, Spring Data JPA, tratamento de exceções e microsserviços.</p>
+        </div>
+
+        <div class="tech-card">
+          <div class="tech-icon">🐍</div>
+          <h3 class="tech-name">Python</h3>
+          <p class="tech-desc">Automação de tarefas, scripts e resolução de problemas algorítmicos.</p>
+        </div>
+
+        <div class="tech-card">
+          <div class="tech-icon">☁️</div>
+          <h3 class="tech-name">Google Cloud</h3>
+          <p class="tech-desc">Fundamentos de arquitetura em nuvem, computação escalável e serviços GCP.</p>
+        </div>
+
+        <div class="tech-card">
+          <div class="tech-icon">🗄️</div>
+          <h3 class="tech-name">SQL & Bancos de Dados</h3>
+          <p class="tech-desc">Modelagem relacional, queries estruturadas, H2 Database e integração via ORM.</p>
+        </div>
+
+        <div class="tech-card">
+          <div class="tech-icon">🐙</div>
+          <h3 class="tech-name">Git & GitHub</h3>
+          <p class="tech-desc">Controle de versão, fluxo de branches, pull requests e documentação de código.</p>
+        </div>
+
+        <div class="tech-card">
+          <div class="tech-icon">📐</div>
+          <h3 class="tech-name">UML & BPMN</h3>
+          <p class="tech-desc">Modelagem visual de sistemas, diagramas de classes e mapeamento de processos.</p>
+        </div>
+
+        <div class="tech-card">
+          <div class="tech-icon">🌐</div>
+          <h3 class="tech-name">HTML, CSS & JavaScript</h3>
+          <p class="tech-desc">Desenvolvimento frontend responsivo, manipulação de DOM e consumo assíncrono de APIs.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- projetos -->
+    <section id="projetos" class="section">
+      <div class="section-tag">04 / PORTFÓLIO DE PROJETOS</div>
+
+      <div class="section-heading">
+        <h2 class="section-title">Projetos em <span class="highlight-text">Destaque</span></h2>
+        <p class="section-subtitle">Aplicações práticas que desenvolvi, com código aberto e documentação no GitHub.</p>
+      </div>
+
+      <div class="projects-grid">
+        <!-- projeto 1 -->
+        <article class="project-card">
+          <div class="card-corner tl"></div><div class="card-corner tr"></div>
+          <div class="card-corner bl"></div><div class="card-corner br"></div>
+
+          <div class="project-header">
+            <span class="project-number">PROJETO 01</span>
+            <span class="project-badge">BACKEND</span>
+          </div>
+
+          <div class="project-thumb">
+            <img src="imagens/projeto1.jpg" alt="Game-Manager-API" class="project-img" onerror="this.src='data:image/svg+xml,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'240\' viewBox=\'0 0 400 240\'><rect fill=\'%23111622\' width=\'400\' height=\'240\'/><text fill=\'%23a855f7\' x=\'50%25\' y=\'50%25\' text-anchor=\'middle\' font-size=\'18\' font-family=\'sans-serif\'>Game-Manager-API</text></svg>'">
+          </div>
+
+          <div class="project-content">
+            <h3 class="project-title">Game-Manager-API</h3>
+            <p class="project-summary">
+              Aplicação backend para gerenciamento de catálogo de jogos, estruturada em arquitetura de camadas 
+              (Domain, Repository, Service e Controller). Utiliza integração com ORM para persistência e seed automático do banco.
+            </p>
+
+            <div class="project-techs">
+              <span class="tech-tag">Java</span>
+              <span class="tech-tag">Spring Boot</span>
+              <span class="tech-tag">Spring Data JPA</span>
+              <span class="tech-tag">ORM</span>
+            </div>
+
+            <a href="https://github.com/Alan0o0/Game-Manager-API" target="_blank" rel="noopener noreferrer" class="btn-project">
+              <span>Ver código no GitHub</span>
+              <span class="arrow">↗</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- projeto 2 -->
+        <article class="project-card">
+          <div class="card-corner tl"></div><div class="card-corner tr"></div>
+          <div class="card-corner bl"></div><div class="card-corner br"></div>
+
+          <div class="project-header">
+            <span class="project-number">PROJETO 02</span>
+            <span class="project-badge">INTEGRAÇÃO HTTP</span>
+          </div>
+
+          <div class="project-thumb">
+            <img src="imagens/projeto2.jpg" alt="Consulta-Cep" class="project-img" onerror="this.src='data:image/svg+xml,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'240\' viewBox=\'0 0 400 240\'><rect fill=\'%23111622\' width=\'400\' height=\'240\'/><text fill=\'%2338bdf8\' x=\'50%25\' y=\'50%25\' text-anchor=\'middle\' font-size=\'18\' font-family=\'sans-serif\'>Consulta-CEP</text></svg>'">
+          </div>
+
+          <div class="project-content">
+            <h3 class="project-title">Consulta-Cep</h3>
+            <p class="project-summary">
+              Aplicação em Java puro que realiza consultas de CEPs brasileiros de forma ágil, retornando endereço completo.
+              Demonstra domínio de Programação Orientada a Objetos, consumo de serviços web e requisições HTTP.
+            </p>
+
+            <div class="project-techs">
+              <span class="tech-tag">Java Standard Edition</span>
+              <span class="tech-tag">Consumo de APIs</span>
+              <span class="tech-tag">HTTP Requests</span>
+              <span class="tech-tag">POO</span>
+            </div>
+
+            <a href="https://github.com/Alan0o0/Consulta-Cep" target="_blank" rel="noopener noreferrer" class="btn-project">
+              <span>Ver código no GitHub</span>
+              <span class="arrow">↗</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- projeto 3 -->
+        <article class="project-card">
+          <div class="card-corner tl"></div><div class="card-corner tr"></div>
+          <div class="card-corner bl"></div><div class="card-corner br"></div>
+
+          <div class="project-header">
+            <span class="project-number">PROJETO 03</span>
+            <span class="project-badge">API REST</span>
+          </div>
+
+          <div class="project-thumb">
+            <img src="imagens/projeto3.jpg" alt="Agendador-Horarios" class="project-img" onerror="this.src='data:image/svg+xml,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'240\' viewBox=\'0 0 400 240\'><rect fill=\'%23111622\' width=\'400\' height=\'240\'/><text fill=\'%2310b981\' x=\'50%25\' y=\'50%25\' text-anchor=\'middle\' font-size=\'18\' font-family=\'sans-serif\'>Agendador-Horários</text></svg>'">
+          </div>
+
+          <div class="project-content">
+            <h3 class="project-title">Agendador-Horários</h3>
+            <p class="project-summary">
+              API REST desenvolvida em Spring Boot para cadastro, consulta e controle de agendamentos.
+              Conta com regras de validação para impedir conflitos de horários, tratamento global de exceções e banco H2.
+            </p>
+
+            <div class="project-techs">
+              <span class="tech-tag">Java</span>
+              <span class="tech-tag">Spring Boot</span>
+              <span class="tech-tag">H2 Database</span>
+              <span class="tech-tag">Lombok</span>
+            </div>
+
+            <a href="https://github.com/Alan0o0/Agendador-Horarios" target="_blank" rel="noopener noreferrer" class="btn-project">
+              <span>Ver código no GitHub</span>
+              <span class="arrow">↗</span>
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- contato -->
+    <section id="contato" class="section">
+      <div class="section-tag">05 / COMUNICAÇÃO</div>
+
+      <div class="contact-box">
+        <div class="card-corner tl"></div><div class="card-corner tr"></div>
+        <div class="card-corner bl"></div><div class="card-corner br"></div>
+
+        <div class="contact-header">
+          <span class="mono-code">CONTATO // ENVIE UMA MENSAGEM</span>
+          <span class="box-badge">DISPONÍVEL</span>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-intro">
+            <h2>Vamos conversar sobre <span class="highlight-text">novos projetos</span>?</h2>
+            <p>
+              Estou sempre aberto a novas oportunidades profissionais, projetos em equipe e conversas sobre desenvolvimento backend e computação em nuvem.
+            </p>
+
+            <div class="contact-links-list">
+              <div class="link-item">
+                <span class="item-label">E-MAIL:</span>
+                <a href="mailto:oalan2796@gmail.com" class="item-link">oalan2796@gmail.com</a>
+              </div>
+              <div class="link-item">
+                <span class="item-label">LINKEDIN:</span>
+                <a href="https://www.linkedin.com/in/alan-b-de-oliveira/" target="_blank" rel="noopener noreferrer" class="item-link">linkedin.com/in/alan-b-de-oliveira ↗</a>
+              </div>
+              <div class="link-item">
+                <span class="item-label">GITHUB:</span>
+                <a href="https://github.com/Alan0o0" target="_blank" rel="noopener noreferrer" class="item-link">github.com/Alan0o0 ↗</a>
+              </div>
+            </div>
+          </div>
+
+          <form id="formContato" class="contact-form" action="https://formsubmit.co/oalan2796@gmail.com" method="POST" target="_blank">
+            <div class="form-group">
+              <label for="campo-nome">Seu nome:</label>
+              <input type="text" id="campo-nome" name="nome" required placeholder="Digite seu nome" class="form-input">
+            </div>
+
+            <div class="form-group">
+              <label for="campo-email">Seu e-mail:</label>
+              <input type="email" id="campo-email" name="email" required placeholder="seuemail@exemplo.com" class="form-input">
+            </div>
+
+            <div class="form-group">
+              <label for="campo-msg">Mensagem:</label>
+              <textarea id="campo-msg" name="mensagem" required rows="4" placeholder="Escreva sua mensagem ou proposta..." class="form-input"></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit">
+              <span>Enviar Mensagem</span>
+              <span>&rarr;</span>
+            </button>
+            <div id="formFeedback" class="form-feedback" style="display: none;"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- rodape -->
+  <footer class="main-footer">
+    <div class="footer-inner">
+      <div class="footer-copy">
+        <strong>Alan Benvenuto</strong> &copy; 2026 &bull; Desenvolvido com foco em alta performance e design modular.
+      </div>
+      <div class="footer-links">
+        <a href="#home">Voltar ao topo ↑</a>
+      </div>
     </div>
+  </footer>
 
-      <a class="btn-card" rel="stylesheet" href="https://github.com/Alan0o0/Agendador-Horarios" target="_blank">Ver projeto</a>
-
-    <div class="conteudo">
-      <h3>Sobre o projeto</h3>
-      <p>
-      <span>Agendador-Horarios</span> é uma <span>API REST</span> desenvolvida em
-      <span>Java</span> utilizando <span>Spring Boot</span>, que permite
-      <span>cadastrar</span>, <span>consultar</span>,
-      <span>alterar</span> e <span>remover agendamentos</span>.
-      O projeto utiliza <span>Spring Data JPA</span>, <span>Lombok</span>,
-      <span>H2 Database</span> e <span>Maven</span>, além de implementar
-      <span>tratamento global de exceções</span> e regras para evitar
-      conflitos de horários, seguindo boas práticas no desenvolvimento de APIs.
-    </p>
-    </div>
-
-  </div>
-
-</div>
-
-</section>
- 
-<!-- Contato -->
-  <section id="contato">
-
-  <div class="contato-container">
-
-    <div class="contato-texto">
-      <h2>Contato</h2>
-      <p>
-        Se quiser conversar sobre projetos, oportunidades ou simplesmente trocar ideias, estou à disposição. 
-        Gosto de construir conexões e acredito que boas conversas podem abrir caminhos incríveis.
-      </p>
-    </div>
-
-<form 
-  id="formContato"
-  action="https://formsubmit.co/oalan2796@gmail.com" 
-  method="POST" 
-  target="_blank"
-  onsubmit="mensagemEnviada()"
->
-  <div class="input-container" id="name">
-    <input type="text" name="nome" required placeholder=" " ><label >Seu nome</label>
-  </div>
-
-  <div class="input-container" id="email">
-    <input type="email" name="email" required placeholder=" " ><label>Seu email</label>
-  </div>
-
-  <div class="input-container" id="mensagem">
-    <textarea name="mensagem" required placeholder=" " ></textarea><label>Sua mensagem</label>
-  </div>
-
-  <button type="submit">Enviar</button>
-
-</form>
-    
-  </div>
-
-</section>
-
-<footer>
-      <p> 2026 - Desenvolvido por Alan Benvenuto.<br>
-        Este site foi criado como parte de um projeto academico, com foco em desenvolvimento web e aplicações.<br>
-        Todos os direitos reservados a Alan Benvenuto de Oliveira.</p>
-    </footer>
-
-
-<script src="script.js"></script>
+  <!-- scripts -->
+  <script src="script.js"></script>
 </body>
 </html>
