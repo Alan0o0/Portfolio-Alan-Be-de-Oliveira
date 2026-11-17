@@ -2,7 +2,7 @@ function toggleMenu() {
   document.querySelector("nav ul").classList.toggle("active");
 }
 
-// FECHAR MENU AO CLICAR NOS LINKS
+
 const links = document.querySelectorAll("nav ul li a");
 
 links.forEach(link => {
